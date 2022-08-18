@@ -4,6 +4,9 @@ const cors = require("cors");
 const colors = require("colors");
 
 const { errorHandler } = require("./middlewares/errorMiddleware");
+const connectDB = require("./config/db");
+
+connectDB();
 
 const app = express();
 
