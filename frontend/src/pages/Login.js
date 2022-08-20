@@ -25,7 +25,9 @@ const Login = () => {
     if (isSuccess || user?.token) {
       navigate("/");
     }
-    dispatch(reset());
+    return () => {
+      dispatch(reset());
+    };
   }, [user, isError, isSuccess, message, navigate, dispatch]);
   const onChange = (e) => {
     setFormData((prevState) => ({
