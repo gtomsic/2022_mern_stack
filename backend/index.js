@@ -18,7 +18,7 @@ const PORT = process.env.PORT || 8000;
 
 app.listen(
   PORT,
-  console.log(`Server is running http:/localhost:${PORT}`.green.inverse.bold)
+  console.log(`Server is running http://localhost:${PORT}`.green.inverse.bold)
 );
 
 app.use("/api/goals", require("./routes/goalRoutes"));
